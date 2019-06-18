@@ -1,4 +1,5 @@
 FROM openshift/origin-ansible:v3.11.1
+USER root
 RUN yum install -y --setopt=tsflags=nodocs https://repos.fedorapeople.org/repos/openstack/openstack-queens/rdo-release-queens-1.noarch.rpm && \
     yum -y install python2-pip && \
     pip install --upgrade pip && \
